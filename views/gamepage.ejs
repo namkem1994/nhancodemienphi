@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Code <%= data.tenGame %>
+    </title>
+    <link rel="shortcut icon" href="../public/images/bocvip-icon.ico" />
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+
+<body class="body-style">
+    <div class="wraper">
+        <%- include ('./header'); -%>
+            <section class="banner">
+                <div class="content">
+                    <img src="<%= data.banner1 %>" alt="">
+                </div>
+            </section>
+            <div class="content text-content">
+                <div class="bread">
+                    <a href="./">Trang chủ</a> >>
+                    <a href="./code-boc-club"> Code
+                        <%= data.tenGame %>
+                    </a>
+                </div>
+                <div class="text-mota">
+                    <p style="text-align: justify;"><span style="color: #1d9af5;"><strong>
+                                <%= data.tenGame %>
+                            </strong></span>&nbsp;<%= data.content %>
+                    </p>
+                    <p>Để giúp các fan <%= data.tenGame %> có thể thêm chút thời gian để giải trí, cũng như là món quà
+                            nhằm
+                            khích lệ tinh thần cho tất cả game thủ đang tham gia chơi <%= data.tenGame %>, tangcode247
+                                xin hướng dẫn
+                                <a style="color: #1d9af5;" href="<%= data.linkpage %>">cách thức nhận code <%=
+                                        data.tenGame %></a> tại website <a style="color: #1d9af5;"
+                                    href="./">tangcode247</a>
+                                như sau:</p>
+                </div>
+                <div id="toc_container" class="no_bullets">
+                    <p class="toc_title">Nội dung bài viết </p>
+                    <ul class="toc_list">
+                        <li><a href="#gift-code">Giftcode <%= data.tenGame %></a></li>
+                        <li><a href="#cach-nhan-code">Hướng dẫn cách nhận Code</a></li>
+                    </ul>
+                </div>
+                <h4><span id="gift-code"><strong>Giftcode <%= data.tenGame %></strong></span></h4>
+                <p>Dưới đây là bảng giftcode từ <%= data.tenGame %> mà bạn có thể nhận được.</p>
+                <table style="border-collapse: collapse; width: 100%; height: 92px;">
+                    <tbody>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; height: 23px; text-align: center;"><strong>Tên code</strong></td>
+                            <td style="width: 50%; height: 23px; text-align: center;"><strong>Trị giá</strong></td>
+                        </tr>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; height: 23px; text-align: center;">
+                                <%= data.tenCode %>1
+                            </td>
+                            <td style="width: 50%; height: 23px; text-align: center;">100.000 <%= data.triGia %>
+                            </td>
+                        </tr>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; text-align: center; height: 23px;">
+                                <%= data.tenCode %>2
+                            </td>
+                            <td style="width: 50%; text-align: center; height: 23px;">200.000 <%= data.triGia %>
+                            </td>
+                        </tr>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; text-align: center; height: 23px;">
+                                <%= data.tenCode %>3
+                            </td>
+                            <td style="width: 50%; text-align: center; height: 23px;">500.000 <%= data.triGia %>
+                            </td>
+                        </tr>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; text-align: center; height: 23px;">
+                                <%= data.tenCode %>4
+                            </td>
+                            <td style="width: 50%; text-align: center; height: 23px;">1.000.000 <%= data.triGia %>
+                            </td>
+                        </tr>
+                        <tr style="height: 23px;">
+                            <td style="width: 50%; text-align: center; height: 23px;">
+                                <%= data.tenCode %>5
+                            </td>
+                            <td style="width: 50%; text-align: center; height: 23px;">2.000.000 <%= data.triGia %>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="content2">
+                    <p><a href="login-get-gift-code"><button class="napngay" style="vertical-align:middle"><span>Nhận
+                                    Code
+                                </span><br>
+                            </button></a></p>
+                    <h3><span id="cach-nhan-code"><strong>Cách nhận Code <%= data.tenGame %> tại
+                                    tangcode247.com</strong></span>
+                    </h3>
+                    <p>Để có thể nhận gift-code <%= data.tenGame %> tại <b>tangcode247</b> các anh em hãy xem thể lệ
+                            tham
+                            gia dưới
+                            đây.<br>
+                            <strong>Thể lệ:</strong>
+                    </p>
+                    <ul>
+                        <li>Tài khoản tại <%= data.tenGame %> đã chơi và sử dụng (tiêu) hơn 50.000 <%= data.triGia %>
+                        </li>
+                        <li>Like và comment tương tác bài viết của <%= data.tenGame %>
+                        </li>
+                        <li>Đăng nhập chơi <%= data.tenGame %> liên tiếp 3 ngày trở lên</li>
+                    </ul>
+                    <h3>Hướng dẫn nhận Giftcode <%= data.tenGame %> tại <strong>tangcode247</strong> như sau:</h3>
+                    <ul>
+                        <li>Bước 1: Bấm vào nút “Nhận Code” ở phía trên để hệ thống chuyển đến trang nhận code</li>
+                        <li>Bước 2: Nhập thông tin để hệ thống kiểm tra và gửi mã gift-code</li>
+                        <li>Bước 3: Sau khi đã nhập thông tin đầy đủ và hoàn tất, bấm nút “Nhận Code” ngay bên dưới để
+                            hệ
+                            thống xử lý và gửi code vào hòm thư.</li>
+                        <li>Hệ thống <b>tangcode247</b> chỉ thực hiện gửi mã code khi tài khoản của bạn có đủ 3 điều
+                            kiện
+                            thể
+                            lệ ở trên.</li>
+                    </ul>
+                    <p><img alt="code <%= data.tenGame %>" data-src="<%= data.banner2 %>" class=" lazyloaded"
+                            src="<%= data.banner2 %>"><noscript><img src="<%= data.banner2 %>"
+                                alt="code bốc club" /></noscript></p>
+                    <p style="text-align: justify;"><strong>Từ khóa:</strong> <a href="./<%= data.linkpage %>">Code <%=
+                                data.tenGame %></a> /
+                        <a href="<%= data.linkpage %>">Nhận Code <%= data.tenGame %></a>
+                    </p>
+                    <p>Mọi thắc mắc hoặc góp ý vui lòng liên hệ E-mail : hotro@tangcode247.com hoặc gửi tin nhắn <a
+                            href="#">FANPAGE FACEBOOK</a> để được hỗ trợ thêm.</p>
+
+                </div>
+            </div>
+            <%- include("./footer"); -%>
+    </div>
+    <script src="../public/js/home.js"></script>
+</body>
+
+</html>
